@@ -1,0 +1,10 @@
+CREATE DATABASE db;
+
+USE db;
+
+CREATE TABLE users (
+  id INT NOT NULL auto_increment,
+  email VARCHAR(30) NOT NULL,
+  senha VARCHAR(30) NOT NULL,
+  PRIMARY KEY(id)
+) ENGINE=INNODB;
