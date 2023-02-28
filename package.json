@@ -1,0 +1,26 @@
+{
+  "name": "fullstack-challenge-Beeteller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compose:up": "cd app && docker-compose up -d --build",
+    "compose:down": "cd app && docker-compose down --remove-orphans",
+    "startDB": "cd app/backend/ && npm run migration && npm run seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iahgo/projetoBeeteller"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iahgo/projetoBeeteller/issues"
+  },
+  "homepage": "https://github.com/iahgo/projetoBeeteller#readme"
+}
