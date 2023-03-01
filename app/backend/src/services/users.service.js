@@ -1,10 +1,10 @@
-const userModel = require('../models/users.model');
+const moedaModel = require('../models/users.model');
 
-const findAllUser = async () => {
-  const users = await userModel.findAllUser();
+const findAllValues = async () => {
+  const users = await moedaModel.findAllValues();
   return { type: null, message: users };
 };
 
 module.exports = {
-  findAllUser,
+  findAllValues,
 };
