@@ -1,11 +1,5 @@
 const connection = require('./connection');
 
-const findAllUser = async () => {
-  const [users] = await connection.execute(
-    'SELECT * FROM db.users',
-  );
-  return users;
-};
 
 const findByEmail = async (email) => {
   const [user] = await connection.execute(
@@ -16,6 +10,5 @@ const findByEmail = async (email) => {
 };
 
 module.exports = {
-  findAllUser,
   findByEmail,
 };
