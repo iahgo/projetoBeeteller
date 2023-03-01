@@ -1,0 +1,70 @@
+.dashboard{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
+  
+  position: absolute;
+  width: 1170px;
+  height: 271px;
+  left: 136px;
+  top: 123px;
+  
+}
+
+.coins-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+  
+  width: 1170px;
+  height: 189px;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.coin-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 10px;
+  
+  width: 369px;
+  height: 189px;
+  
+  /* Branco */
+  
+  background: #FFFFFF;
+  /* Shadown Cards */
+  
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.coin-code {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.coin-bid {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.coin-name {
+  font-size: 1.2rem;
+}
