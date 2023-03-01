@@ -11,20 +11,26 @@ const findAllValues = async (coin) => {
 
 const formatTimestamp = (timestamp) => {
   const date = new Date(timestamp * 1000);
-  const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/
-  ${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+  const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
   return formattedDate;
 };
 
 const findAllValuesByDays = async (coin, days) => {
   const values = await coinsModel.findAllValuesByDays(coin, days);
   const groupedData = values.reduce((acc, data) => {
-    const day = formatTimestamp(data.timestamp).split(' ')[0];
+    const day = formatTimestamp(data.timestamp);
     if (!acc[day]) {
-      acc[day] = { dia: day, minimo: data.low, maximo: data.high, variacao: data.pctChange };
+      acc[day] = { 
+        nome: values[0].name, 
+        dia: day, 
+        minimo: data.low, 
+        maximo: data.high, 
+        variacao: data.pctChange, 
+      };
     }
     return acc;
   }, {});
+  // console.log(Object.values(groupedData));
 
   return { type: null, message: Object.values(groupedData) };
 };
