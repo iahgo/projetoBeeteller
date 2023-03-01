@@ -2,10 +2,9 @@ import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/login.css';
-import activity from '../icons/activity.svg';
-import logobeeteller from '../icons/logobeeteller.svg';
 import Login from '../icons/login.svg';
 import { Link } from "react-router-dom";
+import Header from '../components/header';
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -52,21 +51,7 @@ function LoginPage() {
 
   return (
     <div className="nav-top">
-      <div className='nav-infos'>
-        <div className='logos'>
-          <nav className='logo-beeteller'>
-            <nav className='logo-beeteller'><img src={logobeeteller} alt='logo'></img></nav>
-          </nav>
-          <nav className='divider'></nav>
-          <nav className='cotacoes'>
-            <nav className='t-cotacoes'>cotações</nav>
-            <nav className='activity'>
-              <nav className='v-activity'><img src={activity} alt='activity'></img></nav>
-            </nav>
-          </nav>
-        </div>
-        <div className='idioma'>EN</div>
-      </div>
+      <Header />
       <div className='imagem' ><img src={Login} alt='activity'></img></div>
       <section className='section-login'>
         <div className='head'>
