@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/coins.css'
+import symbol1 from '../icons/symbol1.svg';
+// import symbol2 from '../icons/symbol2';
 
 function Coins({ pair }) {
   const [coinsData, setCoinsData] = useState(null);
@@ -29,6 +31,10 @@ function Coins({ pair }) {
         <div className="coin-code">{coinsData.code} / {coinsData.codein}</div>
         <div className="coin-bid">{ajuste((coinsData.bid), 2)}</div>
         <div className="coin-name">{coinsData.name}</div>
+        <div className='symbol'>
+        <div className='coin-image'><img src={symbol1} alt='dolar'></img></div>
+      </div>
+
       {/* </div> */}
     </div>
   );
