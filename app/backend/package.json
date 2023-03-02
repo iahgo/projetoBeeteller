@@ -12,7 +12,7 @@
     "migration": "node -e \"require('./utils/_utils.js').runMigration()\"",
     "seed": "node -e \"require('./utils/_utils.js').runSeed()\"",
     "dev": "nodemon --watch \"./src/**\" ./src/api/server.js",
-    "tes": "npm run migration && npm run seed && npm run dev"
+    "tes": "npm install && npm run migration && npm run seed && npm run dev"
   },
   "keywords": [],
   "author": "iahgo barros",
