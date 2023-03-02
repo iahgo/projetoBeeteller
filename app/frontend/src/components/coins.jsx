@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/coins.css'
 import symbol1 from '../icons/symbol1.svg';
-// import symbol2 from '../icons/symbol2';
+import symbol2 from '../icons/symbol2.svg';
 
-function Coins({ pair }) {
+function Coins({ pair, imagem}) {
   const [coinsData, setCoinsData] = useState(null);
+  const escolha = [symbol1, symbol2]
 
   useEffect(() => {
     axios.get(`http://localhost:3001/coins/${pair}`)
@@ -26,16 +27,20 @@ function Coins({ pair }) {
   }
 
   return (
-    <div className='coin-div'>
-      {/* <div className="coins-container"> */}
-        <div className="coin-code">{coinsData.code} / {coinsData.codein}</div>
-        <div className="coin-bid">{ajuste((coinsData.bid), 2)}</div>
-        <div className="coin-name">{coinsData.name}</div>
-        <div className='symbol'>
-        <div className='coin-image'><img src={symbol1} alt='dolar'></img></div>
+    <div className='coin'>
+      <div className='frame4'>
+        <div className='frame2'>
+          <div className="t-coin">{coinsData.code} / {coinsData.codein}</div>
+          <div className='frame1'>
+            <div className="t-rs">R$</div>
+            <div className="t-valor">{ajuste((coinsData.bid), 2)}</div>
+          </div>
+          <div className="t-rs">{coinsData.name}</div>
+          <div className='bold'>
+            <div className='dolar-sign'><img  src={escolha[Number(imagem)]} alt='moeda'></img></div>
+          </div>
+        </div>
       </div>
-
-      {/* </div> */}
     </div>
   );
 }
