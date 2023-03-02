@@ -1,4 +1,4 @@
-import '../styles/login.css';
+import '../styles/header.css';
 import activity from '../icons/activity.svg';
 import logobeeteller from '../icons/logobeeteller.svg';
 
