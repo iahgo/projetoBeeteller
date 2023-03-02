@@ -1,0 +1,68 @@
+.app {
+  /* margin: 20px; */
+  padding: 20px;
+}
+
+.moedas {
+  margin-top: 100px;
+  margin-left: 137px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tituloMoedas {
+  justify-content: flex-start;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: -0.04em;
+    color: #333333;
+}
+
+.containerCardsMoedas {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.cardsMoedas {
+  width: 30%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px red;
+}
+.infoMoeda {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cotacoes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tituloCotacoes {
+  justify-content: flex-start;
+}
+.containerCotacoes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+.cardsCotacoes {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+.navBar {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
