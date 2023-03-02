@@ -1,5 +1,6 @@
 const userModel = require('../models/users.model');
 const { createToken } = require('../auth/jwtFunctions');
+const { use } = require('chai');
 
 const login = async (email, password) => {
   const user = await userModel.findByEmail(email);
@@ -12,6 +13,11 @@ const login = async (email, password) => {
   return { type: 'Password Wrong', message: 'Email and password does not macth' };
 };
 
+const createUser = async (email, password) => {
+  const newUser = await userModel.createUser(email, password);
+  return newUser;
+}
 module.exports = {
   login,
+  createUser,
 };

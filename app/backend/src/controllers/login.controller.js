@@ -7,6 +7,13 @@ const login = async (req, res) => {
   return res.status(200).json(token);
 };
 
+const createUser = async (req, res) => {
+  const { email, password } = req.body;
+  const newUser = await loginService.createUser(email, password);
+  return res.status(201).json(newUser); 
+}
+
 module.exports = {
   login,
+  createUser,
 };

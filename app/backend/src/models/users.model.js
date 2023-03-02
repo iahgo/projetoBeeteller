@@ -8,6 +8,13 @@ const findByEmail = async (email) => {
   return user;
 };
 
+const createUser = async (email, password) => {
+  const [newUser] = await connection.execute(
+    'INSERT INTO db.users (email, senha) VALUES (?, ?)', [email, password],
+    )
+    return newUser;
+}
 module.exports = {
   findByEmail,
+  createUser,
 };

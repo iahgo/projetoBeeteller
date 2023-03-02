@@ -5,5 +5,6 @@ const loginMiddleware = require('../middlewares/login.middleware');
 const route = express.Router();
 
 route.post('/', loginMiddleware, loginController.login);
+route.post('/new', loginMiddleware, loginController.createUser);
 
 module.exports = route;
