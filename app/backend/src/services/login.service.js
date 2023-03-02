@@ -9,7 +9,7 @@ const login = async (email, password) => {
     const token = createToken(userWithoutPassword);
     return { token };
   }
-  return { type: 'Password Wrong ', message: 'Email and password does not macth' };
+  return { type: 'Password Wrong', message: 'Email and password does not macth' };
 };
 
 module.exports = {
